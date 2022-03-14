@@ -1,0 +1,32 @@
+[
+    {
+        "firstName": "Agilizei",
+        "lastName": "Feio",
+        "adress": "N/A",
+        "emailAdress": "test@mail.com",
+        "radioGender": "m",
+        "checks": [
+            "Netflix",
+            "Dormir"
+        ],
+        "selectCountries": "Japão",
+        "selectYears": "1991",
+        "selectMonths": "Junho",
+        "pwd": "Alunos@123"
+    },
+    {
+        "firstName": "PTQS",
+        "lastName": "legal",
+        "adress": "N/A",
+        "emailAdress": "test23@mail.com",
+        "radioGender": "n",
+        "checks": [
+            "Netflix",
+            "Dormir"
+        ],
+        "selectCountries": "Japão",
+        "selectYears": "1991",
+        "selectMonths": "Junho",
+        "pwd": "Alunos@123"
+    }
+]
