@@ -1,0 +1,146 @@
+{
+  "stats": {
+    "suites": 2,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-03-14T15:50:09.705Z",
+    "end": "2022-03-14T15:50:11.338Z",
+    "duration": 1633,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "6a957682-e49f-4884-816f-780eba935d62",
+      "title": "",
+      "fullFile": "cypress/integration/listagem.spec.js",
+      "file": "cypress/integration/listagem.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "858b5f7b-4b98-4bbd-a668-0c8d9a961981",
+          "title": "Quando não houver cadastros, a listagem deve estar vazia",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "",
+              "fullTitle": "Quando não houver cadastros, a listagem deve estar vazia ",
+              "timedOut": null,
+              "duration": 260,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.fixture(\"listagem-vazia\").then(data => {\n  window.localStorage.setItem('data', JSON.stringify(data));\n});\ncy.visit('https://form-agilizei.netlify.app/listagem.html'); //deveria não ter elementos\ncy.get('table tbody tr').should('have.length', 0);",
+              "err": {},
+              "uuid": "1989e833-7eb5-441f-81a8-b7deb4c618fa",
+              "parentUUID": "858b5f7b-4b98-4bbd-a668-0c8d9a961981",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "1989e833-7eb5-441f-81a8-b7deb4c618fa"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 260,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "f18077a2-071d-403f-9360-05575ab173ce",
+          "title": "Quando houver um ou mais cadastros, a listagem deve exibir um ou mais registros",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "",
+              "fullTitle": "Quando houver um ou mais cadastros, a listagem deve exibir um ou mais registros ",
+              "timedOut": null,
+              "duration": 142,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//window.localStorage.setItem('data', JSON.stringify([{\"firstName\":\"Agilizei\",\"lastName\":\"Feio\",\"adress\":\"N/A\",\"emailAdress\":\"test@mail.com\",\"radioGender\":\"f\",\"checks\":[\"Netflix\",\"Dormir\"],\"selectCountries\":\"Japão\",\"selectYears\":\"1990\",\"selectMonths\":\"Junho\",\"pwd\":\"Alunos@123\"}]))\ncy.fixture(\"listagem-com-itens\").then(data => {\n  window.localStorage.setItem('data', JSON.stringify(data));\n});\ncy.visit('https://form-agilizei.netlify.app/listagem.html');\ncy.get('table tbody tr').should('have.length.above', 0);",
+              "err": {},
+              "uuid": "aa35e2a9-83d0-465d-9655-220493ee740e",
+              "parentUUID": "f18077a2-071d-403f-9360-05575ab173ce",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "aa35e2a9-83d0-465d-9655-220493ee740e"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 142,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": true,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.2"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "mochawesome-report",
+        "quiet": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.1.1"
+    }
+  }
+}
